@@ -1,12 +1,13 @@
 
 $( document ).ready(function() {
+    console.log( "ready!" );
   $("#submit").click(function(){
       $.ajax({
           url: "http://192.168.1.39/dashboard/php/usuarios.php",
-          cache: false,
           type: "POST",
           data: "username=" + $("#username").val() + "&password=" + $("#password").val(),
         }).done(function(respuesta){
+            console.log( "respuesta" );
             var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
             console.log(objetojs);
             if (objetojs.estado != 0) {
@@ -18,7 +19,7 @@ $( document ).ready(function() {
               sessionStorage.setItem('descripcion', objetojs[0].descripcion);
               sessionStorage.setItem('fecha', objetojs[0].fecha);
               sessionStorage.setItem('email', objetojs[0].email);
-              document.location.href = "index.html";
+              //document.location.href = "index.html";
             }
           })
     });
