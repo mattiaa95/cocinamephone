@@ -12,6 +12,7 @@ $( document ).ready(function() {
       formData.append('descripcion', $("#descripcion").val());
       formData.append('email', $("#email").val());
       formData.append('password', $("#cr-password").val());
+      console.log(formData);
       $.ajax({
           url: "http://192.168.1.39/dashboard/php/crearuser.php",
           type: "POST",

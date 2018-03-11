@@ -17,6 +17,8 @@
       Mattiaa95
   </author>
 
+<plugin name="cordova-plugin-whitelist" spec="1" />
+
   <!-- Allow images, xhrs, etc. to google.com -->
 <access origin="http://192.168.1.39" />
 
