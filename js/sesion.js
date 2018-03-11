@@ -2,7 +2,7 @@
 $( document ).ready(function() {
   $("#submit").click(function(){
       $.ajax({
-          url: "php/usuarios.php",
+          url: "http://192.168.1.39/php/usuarios.php",
           cache: false,
           type: "POST",
           data: "username=" + $("#username").val() + "&password=" + $("#password").val(),

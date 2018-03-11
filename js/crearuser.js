@@ -14,7 +14,7 @@ $( document ).ready(function() {
       formData.append('email', $("#email").val());
       formData.append('password', $.md5($("#cr-password").val()));
       $.ajax({
-          url: "php/crearuser.php",
+          url: "http://192.168.1.39/php/crearuser.php",
           type: "POST",
           data: formData,
           contentType: false,
