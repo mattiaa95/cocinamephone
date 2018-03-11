@@ -26,4 +26,40 @@
 <!-- Don't block any requests -->
 <access origin="*" />
 
+
+<!-- Allow links to example.com -->
+<allow-navigation href="http://192.168.1.39/*" />
+
+<!-- A wildcard can be used to whitelist the entire network,
+     over HTTP and HTTPS.
+     *NOT RECOMMENDED* -->
+<allow-navigation href="*" />
+
+
+
+<!-- The above is equivalent to these three declarations -->
+<allow-navigation href="http://*/*" />
+<allow-navigation href="data:*" />
+
+<!-- Allow links to web pages to open in a browser -->
+<allow-intent href="http://*/*" />
+<allow-intent href="https://*/*" />
+
+<!-- Allow links to example.com to open in a browser -->
+<allow-intent href="http://192.168.1.39/*" />
+
+<!-- Allow SMS links to open messaging app -->
+<allow-intent href="sms:*" />
+
+<!-- Allow tel: links to open the dialer -->
+<allow-intent href="tel:*" />
+
+<!-- Allow geo: links to open maps -->
+<allow-intent href="geo:*" />
+
+<!-- Allow all unrecognized URLs to open installed apps
+     *NOT RECOMMENDED* -->
+<allow-intent href="*" />
+
+
 </widget>
