@@ -6,10 +6,9 @@ alert('cargado');
           url: "http://192.168.1.39/dashboard/php/usuarios.php",
           type: "POST",
           data: "username=" + $("#username").val() + "&password=" + $("#password").val(),
-        }).done(function(respuesta){
-            alert(respuesta);
+        success: function(respuesta){
+          alert("respuesta");
             var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
-            console.log(objetojs);
             if (objetojs.estado != 0) {
               window.sessionStorage.setItem('id_usuario', objetojs[0].id);
               window.sessionStorage.setItem('password', objetojs[0].password);
@@ -21,6 +20,11 @@ alert('cargado');
               window.sessionStorage.setItem('email', objetojs[0].email);
               window.document.location.href = "index.html";
             }
+          },
+          error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+          }
+
           })
     });
   });

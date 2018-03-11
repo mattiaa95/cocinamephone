@@ -18,10 +18,12 @@ $( document ).ready(function() {
           data: formData,
           contentType: false,
           processData: false,
-          success: function(respuesta)
-          {
+          success: function(respuesta){
           alert("respuesta");
               window.document.location.href = "index.html";
+          },
+          error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert("Status: " + textStatus); alert("Error: " + errorThrown);
           }
     });
   });
