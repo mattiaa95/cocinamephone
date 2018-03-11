@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  if (!sessionStorage.getItem('usuario')) {
+  if (!window.sessionStorage.getItem('usuario')) {
     document.location.href = "index.html";
   }
 
@@ -18,7 +18,7 @@ $( document ).ready(function() {
 
 		$( "#enviar" ).click(function() {
           console.log($("#tipo").val());
-      if (sessionStorage.getItem('usuario')) {
+      if (window.sessionStorage.getItem('usuario')) {
 					var formData = new FormData();
 					formData.append('file', $('#file')[0].files[0]);
 					formData.append('nombre', $("#nombre").val());

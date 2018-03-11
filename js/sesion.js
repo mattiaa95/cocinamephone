@@ -1,25 +1,25 @@
 
 $( document ).ready(function() {
-    console.log( "ready!" );
+alert('cargado');
   $("#submit").click(function(){
       $.ajax({
           url: "http://192.168.1.39/dashboard/php/usuarios.php",
           type: "POST",
           data: "username=" + $("#username").val() + "&password=" + $("#password").val(),
         }).done(function(respuesta){
-            console.log( "respuesta" );
+            alert(respuesta);
             var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
             console.log(objetojs);
             if (objetojs.estado != 0) {
-              sessionStorage.setItem('id_usuario', objetojs[0].id);
-              sessionStorage.setItem('password', objetojs[0].password);
-              sessionStorage.setItem('usuario', objetojs[0].usuario);
-              sessionStorage.setItem('nombre', objetojs[0].nombre);
-              sessionStorage.setItem('apellidos', objetojs[0].apellidos);
-              sessionStorage.setItem('descripcion', objetojs[0].descripcion);
-              sessionStorage.setItem('fecha', objetojs[0].fecha);
-              sessionStorage.setItem('email', objetojs[0].email);
-              //document.location.href = "index.html";
+              window.sessionStorage.setItem('id_usuario', objetojs[0].id);
+              window.sessionStorage.setItem('password', objetojs[0].password);
+              window.sessionStorage.setItem('usuario', objetojs[0].usuario);
+              window.sessionStorage.setItem('nombre', objetojs[0].nombre);
+              window.sessionStorage.setItem('apellidos', objetojs[0].apellidos);
+              window.sessionStorage.setItem('descripcion', objetojs[0].descripcion);
+              window.sessionStorage.setItem('fecha', objetojs[0].fecha);
+              window.sessionStorage.setItem('email', objetojs[0].email);
+              window.document.location.href = "index.html";
             }
           })
     });

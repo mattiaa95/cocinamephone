@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
     if (sessionStorage.getItem('usuario')) {
       document.location.href = "index.html";
     }
@@ -21,8 +20,8 @@ $( document ).ready(function() {
           processData: false,
           success: function(respuesta)
           {
-            console.log(respuesta);
-            document.location.href = "index.html";
+          alert("respuesta");
+              window.document.location.href = "index.html";
           }
     });
   });
