@@ -34,7 +34,7 @@
      over HTTP and HTTPS.
      *NOT RECOMMENDED* -->
 <allow-navigation href="*" />
-
+<allow-navigation href="data:*" />
 
 
 <!-- The above is equivalent to these three declarations -->
