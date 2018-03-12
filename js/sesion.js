@@ -14,12 +14,8 @@ console.log("sesion ready");
           type: "POST",
           data: parametros,
           success: function(respuesta){
-          alert(respuesta);
           var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
-          alert(objetojs.estado);
-          alert(objetojs.Error);
           if (objetojs.estado != 0) {
-
             window.sessionStorage.setItem('id_usuario', objetojs.id);
             window.sessionStorage.setItem('password', objetojs.password);
             window.sessionStorage.setItem('usuario', objetojs.usuario);
