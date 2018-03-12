@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   if (!window.sessionStorage.getItem('usuario')) {
-    document.location.href = "index.html";
+    window.document.location.href = "index.html";
   }
 
   $.ajax({

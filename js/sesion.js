@@ -3,7 +3,7 @@ $( document ).ready(function() {
 alert('cargado');
   $("#submit").click(function(){
       $.ajax({
-          url: "http://192.168.1.39/dashboard/php/usuarios.php",
+          url: server+"php/usuarios.php",
           type: "POST",
           data: "username=" + $("#username").val() + "&password=" + $("#password").val(),
         success: function(respuesta){
@@ -22,7 +22,7 @@ alert('cargado');
             }
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+            alert("Status: " + textStatus); alert("Error: " + errorThrown);
           }
 
           })
