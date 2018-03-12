@@ -27,7 +27,8 @@
   </author>
 
 <plugin name="cordova-plugin-whitelist" spec="1" />
-
+<preference name="AndroidPersistentFileLocation" value="Compatibility" />
+<plugin name="cordova-plugin-file-transfer" spec="1" />
 
   <!-- Allow images, xhrs, etc. to google.com -->
 <access origin="http://10.10.100.13" />

@@ -40,7 +40,8 @@ $( document ).ready(function() {
 								var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
                   alert(objetojs.Error);
 								  window.document.location.href = "index.html";
-							}
+							},
+                async: false
 					});
         }
 
