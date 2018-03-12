@@ -1,7 +1,8 @@
 
 $( document ).ready(function() {
 console.log("sesion ready");
-  $("#submit").click(function(){
+  $("#submit").click(function(e){
+    e.preventDefault();
     var parametros = {
       "username" : $("#username").val(),
       "password" : $("#password").val()
