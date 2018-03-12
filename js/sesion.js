@@ -1,4 +1,3 @@
-
 $( document ).ready(function() {
 console.log("sesion ready");
   $("#submit").click(function(){
@@ -11,14 +10,7 @@ console.log("sesion ready");
           data: formData,
           contentType: false,
           processData: false,
-        success: function(){
-            alert("funciono");
-          },
-          error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("Status: " + textStatus); alert("Error: " + errorThrown);
-          }
-
-          }).done(function(respuesta){
+        }).done(function(respuesta){
             alert(respuesta);
               var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
               alert(objetojs);
