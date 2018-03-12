@@ -1,1 +1,1 @@
-var server = "http://192.168.1.39/dashboard/"
+var server = "http://127.0.0.1/dashboard/"
