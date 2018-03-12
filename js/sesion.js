@@ -28,9 +28,6 @@ console.log("sesion ready");
             window.sessionStorage.setItem('email', objetojs.email);
             window.document.location.href = "index.html";
           }
-          },
-          error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("Status: " + textStatus + "Error: " + errorThrown);
           }
         })
     });
