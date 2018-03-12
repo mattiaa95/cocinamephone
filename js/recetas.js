@@ -2,7 +2,7 @@ $( document ).ready(function() {
     console.log( "ready!" );
 
 	$.ajax({
-	 url: server + "php/recetas.php",
+	 url: "http://10.10.100.13/php/recetas.php",
 		type: "POST"
 				}).done(function(respuesta){
           var obj = jQuery.parseJSON(JSON.stringify(respuesta));

@@ -4,7 +4,7 @@ $( document ).ready(function() {
   }
 
   $.ajax({
-      url: "php/tipos.php",
+      url: "http://10.10.100.13/php/tipos.php",
       type: "POST",
       success: function(respuesta)
       {
@@ -29,7 +29,7 @@ $( document ).ready(function() {
 					formData.append('id_tipo', $("#tipo").val());
 
 					$.ajax({
-							url: server + "php/recetas_crear.php",
+							url: "http://10.10.100.13/php/recetas_crear.php",
 							type: "POST",
 							data: formData,
 							contentType: false,

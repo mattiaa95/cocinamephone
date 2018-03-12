@@ -1,12 +1,11 @@
 
-$( document ).ready(function() {
 console.log("sesion ready");
   $("#submit").click(function(){
     var formData = new FormData();
     formData.append('username', $("#username").val());
     formData.append('password', $("#password").val());
       $.ajax({
-          url: server + "php/usuarios.php",
+          url: "http://10.10.100.13/php/usuarios.php",
           type: "POST",
           data: formData,
           contentType: false,
@@ -36,4 +35,3 @@ console.log("sesion ready");
 
   				});
     });
-  });
