@@ -3,7 +3,7 @@ $( document ).ready(function() {
 alert('cargado');
   $("#submit").click(function(){
       $.ajax({
-          url: server+"php/usuarios.php",
+          url: server + "php/usuarios.php",
           type: "POST",
           data: "username=" + $("#username").val() + "&password=" + $("#password").val(),
         success: function(respuesta){

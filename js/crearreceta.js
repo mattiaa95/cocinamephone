@@ -29,7 +29,7 @@ $( document ).ready(function() {
 					formData.append('id_tipo', $("#tipo").val());
 
 					$.ajax({
-							url: "http://192.168.1.39/dashboard/php/recetas_crear.php",
+							url: server + "php/recetas_crear.php",
 							type: "POST",
 							data: formData,
 							contentType: false,
