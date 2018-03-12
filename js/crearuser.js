@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     if (sessionStorage.getItem('usuario')) {
-      document.location.href = "index.html";
+      window.document.location.href = "index.html";
     }
   $("#enviar").click(function(){
       var formData = new FormData();
