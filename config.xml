@@ -5,10 +5,19 @@
     versionCode = "10"
     version     = "1.0.0" >
 
+
+    <platform name="android">
+        <config-file parent="/*" target="AndroidManifest.xml">
+          <uses-permission android:name="android.permission.CAMERA" />
+          <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+    </platform>
+
 <!-- versionCode is optional and Android only -->
 
   <name>Cociname</name>
-
   <description>
       Cociname es un proyecto de fin de curso
   </description>
@@ -62,6 +71,4 @@
 <!-- Allow all unrecognized URLs to open installed apps
      *NOT RECOMMENDED* -->
 <allow-intent href="*" />
-
-
 </widget>
