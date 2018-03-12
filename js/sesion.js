@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
-=======
 $( document ).ready(function() {
->>>>>>> f9bfb6d21d3e4caa4671ad700b955515f08477be
 console.log("sesion ready");
   $("#submit").click(function(){
     var formData = new FormData();
