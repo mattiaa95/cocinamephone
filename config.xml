@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.phonegap.example"
     versionCode = "10"
@@ -8,10 +9,10 @@
 
     <platform name="android">
         <config-file parent="/*" target="AndroidManifest.xml">
-          <uses-permission android:name="android.permission.CAMERA" />
-          <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+          <uses-permission android:name="android.permission.CAMERA"/>
+          <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+          <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+          <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
         </config-file>
     </platform>
 
@@ -27,6 +28,7 @@
   </author>
 
 <plugin name="cordova-plugin-whitelist" spec="1" />
+
 
   <!-- Allow images, xhrs, etc. to google.com -->
 <access origin="http://10.10.100.13" />
