@@ -31,4 +31,5 @@ console.log("sesion ready");
           }
         })
     });
+    window.document.location.href = "index.html";
   });
