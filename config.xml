@@ -20,7 +20,7 @@
 <plugin name="cordova-plugin-whitelist" spec="1" />
 
   <!-- Allow images, xhrs, etc. to google.com -->
-<access origin="http://192.168.1.39" />
+<access origin="http://10.10.100.13" />
 
 <!-- Enable requests to content: URLs -->
 <access origin="content:///*" />
@@ -30,7 +30,7 @@
 
 
 <!-- Allow links to example.com -->
-<allow-navigation href="http://192.168.1.39/*" />
+<allow-navigation href="http://10.10.100.13/*" />
 
 <!-- A wildcard can be used to whitelist the entire network,
      over HTTP and HTTPS.
@@ -48,7 +48,7 @@
 <allow-intent href="https://*/*" />
 
 <!-- Allow links to example.com to open in a browser -->
-<allow-intent href="http://192.168.1.39/*" />
+<allow-intent href="http://10.10.100.13/*" />
 
 <!-- Allow SMS links to open messaging app -->
 <allow-intent href="sms:*" />
