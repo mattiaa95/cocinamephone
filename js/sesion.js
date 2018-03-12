@@ -12,7 +12,7 @@ console.log("sesion ready");
           contentType: false,
           processData: false,
         success: function(){
-            alert("funciono");
+            alert("funciona");
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus); alert("Error: " + errorThrown);
