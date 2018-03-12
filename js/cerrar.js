@@ -1,5 +1,6 @@
 $( document ).ready(function() {
   $("#pr-borrar").click(function(){
+
   window.sessionStorage.removeItem('id_usuario');
   window.sessionStorage.removeItem('password');
   window.sessionStorage.removeItem('usuario');

@@ -2,7 +2,8 @@ $( document ).ready(function() {
     if (sessionStorage.getItem('usuario')) {
       window.document.location.href = "index.html";
     }
-  $("#enviar").click(function(){
+  $("#enviar").click(function(e){
+      e.preventDefault();
       var formData = new FormData();
       formData.append('file', $('#file')[0].files[0]);
       formData.append('usuario', $("#usuario").val());
@@ -20,7 +21,6 @@ $( document ).ready(function() {
           contentType: false,
           processData: false,
           success: function(respuesta){
-          alert("respuesta");
               window.document.location.href = "index.html";
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) {

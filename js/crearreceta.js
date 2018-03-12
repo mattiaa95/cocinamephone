@@ -16,7 +16,8 @@ $( document ).ready(function() {
   });
 
 
-		$( "#enviar" ).click(function() {
+		$( "#enviar" ).click(function(e) {
+        e.preventDefault();
           console.log($("#tipo").val());
       if (window.sessionStorage.getItem('usuario')) {
 					var formData = new FormData();
@@ -36,10 +37,8 @@ $( document ).ready(function() {
 							processData: false,
 							success: function(respuesta)
 							{
-								console.log(respuesta);
-								console.log(JSON.stringify(respuesta));
 								var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
-								console.log(objetojs);
+								  window.document.location.href = "index.html";
 							}
 					});
         }
