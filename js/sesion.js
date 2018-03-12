@@ -7,8 +7,6 @@ console.log("sesion ready");
       "username" : $("#username").val(),
       "password" : $("#password").val()
   };
-    console.log(parametros);
-      alert(parametros);
       $.ajax({
           url: "http://10.10.100.13/php/usuarios.php",
           type: "POST",
