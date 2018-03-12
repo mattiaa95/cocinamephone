@@ -1,13 +1,16 @@
 
 $( document ).ready(function() {
-alert('cargado');
+alert('cargado sesion');
+console.log("sesion ready");
   $("#submit").click(function(){
+    console.log("username=" + $("#username").val() + "&password=" + $("#password").val());
       $.ajax({
           url: server + "php/usuarios.php",
           type: "POST",
           data: "username=" + $("#username").val() + "&password=" + $("#password").val(),
         success: function(respuesta){
-          alert("respuesta");
+          alert("respuesta sesion iniciada");
+          console.log(respuesta);
             var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
             if (objetojs.estado != 0) {
               window.sessionStorage.setItem('id_usuario', objetojs[0].id);
