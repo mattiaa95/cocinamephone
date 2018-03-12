@@ -21,6 +21,9 @@ $( document ).ready(function() {
           contentType: false,
           processData: false,
           success: function(respuesta){
+
+            var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
+              alert(objetojs.Error);
               window.document.location.href = "index.html";
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) {
