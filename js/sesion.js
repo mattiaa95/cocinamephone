@@ -19,6 +19,7 @@ console.log("sesion ready");
           alert(objetojs.estado);
           alert(objetojs.Error);
           if (objetojs.estado != 0) {
+
             window.sessionStorage.setItem('id_usuario', objetojs.id);
             window.sessionStorage.setItem('password', objetojs.password);
             window.sessionStorage.setItem('usuario', objetojs.usuario);
@@ -27,6 +28,7 @@ console.log("sesion ready");
             window.sessionStorage.setItem('descripcion', objetojs.descripcion);
             window.sessionStorage.setItem('fecha', objetojs.fecha);
             window.sessionStorage.setItem('email', objetojs.email);
+            window.sessionStorage.setItem('imagen', objetojs.imagen);
             window.document.location.href = "index.html";
           }
           }
