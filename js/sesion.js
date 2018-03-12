@@ -1,21 +1,21 @@
 
 $( document ).ready(function() {
-alert('cargado sesion');
 console.log("sesion ready");
   $("#submit").click(function(){
-    console.log("username=" + $("#username").val() + "&password=" + $("#password").val());
+    var formData = new FormData();
+    formData.append('username', $("#username").val());
+    formData.append('password', $("#password").val());
       $.ajax({
           url: server + "php/usuarios.php",
           type: "POST",
-          data: "username=" + $("#username").val() + "&password=" + $("#password").val(),
+          data: formData,
+          contentType: false,
+          processData: false,
         success: function(respuesta){
-          alert("respuesta sesion iniciada");
-          console.log(respuesta);
-
+          alert(respuesta);
             var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
-console.log(objetojs);
+            alert(objetojs);
             if (objetojs.estado == 1) {
-              console.log("entro en sesion");
               window.sessionStorage.setItem('id_usuario', objetojs.id);
               window.sessionStorage.setItem('password', objetojs.password);
               window.sessionStorage.setItem('usuario', objetojs.usuario);
