@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+$( document ).ready(function() {
+>>>>>>> f9bfb6d21d3e4caa4671ad700b955515f08477be
 console.log("sesion ready");
   $("#submit").click(function(){
     var formData = new FormData();
@@ -10,14 +14,7 @@ console.log("sesion ready");
           data: formData,
           contentType: false,
           processData: false,
-        success: function(){
-            alert("funciona");
-          },
-          error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("Status: " + textStatus); alert("Error: " + errorThrown);
-          }
-
-          }).done(function(respuesta){
+        }).done(function(respuesta){
             alert(respuesta);
               var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
               alert(objetojs);
