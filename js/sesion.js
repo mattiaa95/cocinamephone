@@ -24,7 +24,7 @@ console.log("sesion ready");
               window.sessionStorage.setItem('descripcion', objetojs.descripcion);
               window.sessionStorage.setItem('fecha', objetojs.fecha);
               window.sessionStorage.setItem('email', objetojs.email);
-              //window.document.location.href = "index.html";
+              window.document.location.href = "index.html";
             }
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) {
