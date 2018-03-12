@@ -11,9 +11,9 @@ console.log("sesion ready");
         success: function(respuesta){
           alert("respuesta sesion iniciada");
           console.log(respuesta);
-          console.log(objetojs);
-            var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
 
+            var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
+console.log(objetojs);
             if (objetojs.estado == 1) {
               console.log("entro en sesion");
               window.sessionStorage.setItem('id_usuario', objetojs.id);
