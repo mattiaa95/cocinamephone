@@ -2,20 +2,22 @@
 $( document ).ready(function() {
 console.log("sesion ready");
   $("#submit").click(function(){
-    var formData = new FormData();
-    formData.append('username', $("#username").val());
-    formData.append('password', $("#password").val());
+    var parametros = {
+      "username" : $("#username").val(),
+      "password" : $("#password").val()
+  };
+    console.log(parametros);
+      alert(parametros);
       $.ajax({
           url: "http://10.10.100.13/php/usuarios.php",
           type: "POST",
-          data: formData,
-          contentType: false,
-          processData: false,
+          data: parametros,
           success: function(respuesta){
           alert(respuesta);
           var objetojs = jQuery.parseJSON(JSON.stringify(respuesta));
-          console.log(objetojs);
-          if (objetojs.estado == 1) {
+          alert(objetojs.estado);
+          alert(objetojs.Error);
+          if (objetojs.estado != 0) {
             window.sessionStorage.setItem('id_usuario', objetojs.id);
             window.sessionStorage.setItem('password', objetojs.password);
             window.sessionStorage.setItem('usuario', objetojs.usuario);
@@ -28,7 +30,7 @@ console.log("sesion ready");
           }
           },
           error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("Status: " + textStatus); alert("Error: " + errorThrown);
+            alert("Status: " + textStatus + "Error: " + errorThrown);
           }
         })
     });
