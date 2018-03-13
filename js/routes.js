@@ -8,6 +8,7 @@ $( document ).ready(function() {
       //      '<a class="btn btn-default" href="crearreceta.html"> CrearReceta </a>' +
         //      '</div>');
     $("#login").hide();
+    window.document.location.href = "listarrecetas.html";
   }else {
     $("#auth").hide();
     $("#login").show();
