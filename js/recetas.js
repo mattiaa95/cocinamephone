@@ -1,5 +1,6 @@
 $( document ).ready(function() {
   if (window.sessionStorage.getItem('usuario')) {
+
     $.ajax({
      url: "http://10.10.100.13/php/recetas.php",
       type: "POST"
@@ -18,6 +19,7 @@ $( document ).ready(function() {
                   )
                 )
             });
+            	});
   }else {
   window.document.location.href = "index.html";
   }
@@ -26,5 +28,5 @@ $( document ).ready(function() {
 
 
 
-				});
+
 		});
