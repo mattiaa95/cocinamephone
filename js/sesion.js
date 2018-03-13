@@ -23,7 +23,7 @@ console.log("sesion ready");
             window.sessionStorage.setItem('fecha', objetojs.fecha);
             window.sessionStorage.setItem('email', objetojs.email);
             window.sessionStorage.setItem('imagen', objetojs.imagen);
-            window.document.location.href = "index.html";
+            window.document.location.href = "listarrecetas.html";
           }
           }
         })
