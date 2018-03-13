@@ -15,7 +15,14 @@
         </config-file>
     </platform>
 
-  <icon src="icon.PNG" />
+    <splash src="res/mipmap-mdpi/ic_launcher.png" platform="android" qualifier="ldpi" />
+    <splash src="res/mipmap-mdpi/ic_launcher.png" platform="android" qualifier="mdpi" />
+    <splash src="res/mipmap-hdpi/ic_launcher.png" platform="android" qualifier="hdpi" />
+    <splash src="res/mipmap-xhdpi/ic_launcher.png" platform="android" qualifier="xhdpi" />
+    <splash src="res/mipmap-xhdpi/ic_launcher.png" platform="android" qualifier="fr-xhdpi" />
+    <splash src="res/mipmap-xxhdpi/ic_launcher.png" platform="android" qualifier="port-xxhdpi" />
+    <splash src="res/mipmap-xxhdpi/ic_launcher.png" platform="android" qualifier="land-xxhdpi" />
+    <splash src="res/mipmap-xxxhdpi/ic_launcher.png" platform="android" qualifier="xxxhdpi" />
 <!-- versionCode is optional and Android only -->
 
   <name>Cociname</name>
