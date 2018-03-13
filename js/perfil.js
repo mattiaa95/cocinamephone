@@ -11,5 +11,4 @@ $( document ).ready(function() {
   window.document.location.href = "index.html";
   }
 
-
 });
