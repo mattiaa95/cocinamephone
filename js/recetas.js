@@ -9,12 +9,13 @@ $( document ).ready(function() {
           obj.forEach(function(element) {
             $("#cuerpo").append(
                 $('<div>', {
-                    'class': 'col-md-6'
+                    'class': ' col-md-12 thumbnail',
+                    'style': 'background-color:#ccc'
                 }).append(
                   $('<h2>').append($('<a>',{'href':'#','text':element.nombre})),
+                  $('<h3>',{'text':'Precio: '+element.precio+'€'}),
                   $('<p>',{'text':element.receta_descripcion}),
-                  $('<img />', { src: 'http://10.10.100.13/img/'+element.src ,alt: element.nombre,height: '300px',width:'300px'}),
-                  $('<p>').append($('<a>',{'class': 'btn btn-default', 'href':'#','role':'button' ,'text': 'Reserva'}))
+                  $('<img />', { src: 'http://10.10.100.13/img/'+element.src ,alt: element.nombre,height: '300px',width:'300px'})
                 )
               )
           });
