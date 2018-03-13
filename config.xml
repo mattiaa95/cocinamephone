@@ -15,6 +15,7 @@
         </config-file>
     </platform>
 
+  <icon src="icon.PNG" />
 <!-- versionCode is optional and Android only -->
 
   <name>Cociname</name>
